@@ -285,7 +285,7 @@ header.masthead .post-heading .meta a {
   margin: 0 0 10px;
 }
 
-.post-preview > .post-meta {
+.post-view > .post-meta {
   font-size: 18px;
   font-style: italic;
   margin-top: 0;
@@ -297,7 +297,7 @@ header.masthead .post-heading .meta a {
   color: #212529;
 }
 
-.post-preview > .post-meta > a:focus, .post-preview > .post-meta > a:hover {
+.post-view > .post-meta > a:focus, .post-preview > .post-meta > a:hover {
   text-decoration: underline;
   color: #0085A1;
 }
@@ -408,4 +408,9 @@ footer .copyright {
 .btn-lg {
   font-size: 16px;
   padding: 25px 35px;
+}
+
+pre{
+    background-color: black;
+    color: white;
 }
