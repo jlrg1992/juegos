@@ -85,24 +85,28 @@
 <h3 id="cd">cd</h3>
 <p>Para moverte de una carpeta a otra se utiliza <code>cd</code>(change directory). Este comando acepta (igual que mkdir) un argumento, que sería la carpeta a la que quieres ir. Entremos a la carpeta &quot;Desktop&quot; con <code>cd Desktop</code>. Si utilizas pwd, podrás ver que te encuentras ahora en la carpeta de Desktop.</p>
 <p>¿Y cómo regreso a la carpeta que estaba antes? Si te fijas con <code>pwd</code> debes de haber recibido una respuesta como <code>/Users/tu-usuario/Desktop</code> para regresar a la carpeta &quot;tu-usuario&quot; hay tres maneras.</p>
-<p>```` // La primera: cd /Users/tu-usuario</p>
-<p>// La segunda: cd ~ // ~ es una forma abreviada de referirse a tu carpeta de usuario.</p>
-<p>// La tercera: cd .. // Los dos puntos &quot;..&quot; son una forma de referirse a la carpeta &quot;arriba&quot; de la que ocupas en el momento</p>
-<pre><code>
-Si sólo escribieras un punto `cd .` te quedarías en la misma carpeta. Porque el punto se utiliza para referirse a la carpeta en la que te encuentras actualmente.
+<pre><code>// La primera:
+cd /Users/tu-usuario
 
-### open
+// La segunda:
+cd ~
+// ~ es una forma abreviada de referirse a tu carpeta de usuario.
 
-El comando `open` se utiliza para abrir un archivo con el programa determinado por el sistema operativo. Claro que el programa determinado se puede modificar en tus preferencias del sistema. Un ejemplo son las carpetas. El programa que utiliza Mac para abrir las carpetas es Finder. Entonces si utilizamos `open .` Abrirá la carpeta en la que estemos en el Finder, como suele verlo mayoría de la gente.
+// La tercera:
+cd ..
+// Los dos puntos &quot;..&quot; son una forma de referirse a la carpeta &quot;arriba&quot; de la que ocupas en el momento</code></pre>
+<p>Si sólo escribieras un punto <code>cd .</code> te quedarías en la misma carpeta. Porque el punto se utiliza para referirse a la carpeta en la que te encuentras actualmente.</p>
+<h3 id="open">open</h3>
+<p>El comando <code>open</code> se utiliza para abrir un archivo con el programa determinado por el sistema operativo. Claro que el programa determinado se puede modificar en tus preferencias del sistema. Un ejemplo son las carpetas. El programa que utiliza Mac para abrir las carpetas es Finder. Entonces si utilizamos <code>open .</code> Abrirá la carpeta en la que estemos en el Finder, como suele verlo mayoría de la gente.</p>
+<h3 id="rm">rm</h3>
+<p>Como última tarea para este post vamos a eliminar nuestra carpeta &quot;programa&quot; con el comando <code>rm</code>. Éste tiene la peculiaridad de que no manda lo eliminado al basurero, sino que lo elimina completamente. Si quisiera eliminar un archivo bastaría con escribir <code>rm nombreDelArchivo</code> pero como lo que vamos a eliminar es una carpeta, necesitamos darle unas indicaciones extras.</p>
+<pre><code>// Primero vamos a asegurarnos de estar en la carpeta correcta. O sea, una carpeta arriba. En este caso, la carpeta de usuario
 
-### rm
+cd ~ 
 
-Como última tarea para este post vamos a eliminar nuestra carpeta &quot;programa&quot; con el comando `rm`. Éste tiene la peculiaridad de que no manda lo eliminado al basurero, sino que lo elimina completamente. Si quisiera eliminar un archivo bastaría con escribir `rm nombreDelArchivo` pero como lo que vamos a eliminar es una carpeta, necesitamos darle unas indicaciones extras.
-</code></pre>
-<p>// Primero vamos a asegurarnos de estar en la carpeta correcta. O sea, una carpeta arriba. En este caso, la carpeta de usuario</p>
-<p>cd ~</p>
-<p>// Luego vamos a utilizar rm con la indicación rf.</p>
-<p>rm -rf programa ```</p>
+// Luego vamos a utilizar rm con la indicación rf.
+
+rm -rf programa</code></pre>
 <p>Es importante ver el guión <code>-</code> que se utiliza para esta indicación extra. La &quot;r&quot; se refiere a que elimine de manera recursiva. Esto quiere decir que elimine también el contenido y si en ese contenido hay carpetas, también el contenido de esas carpetas y así consecutivamente. La &quot;f&quot; es para &quot;forzar&quot; el comando. Es como cuando tu mamá te dice algo en tono serio para que no dudes en hacerlo.</p>
 <p>Bueno, con esto terminamos nuestra primera introducción a la terminal. No se olviden que la mejor manera de aprenderse todos estos comandos es utilizándolos, así que busquen pretextos para buscar sus archivos desde la terminal y abrirlos. Hasta el próximo post.</p>
 </div>
