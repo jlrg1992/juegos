@@ -71,20 +71,20 @@
 <p>En este breve post voy a explicar los comando más básicos que se deben conocer para comenzar a trabajar con la terminal. Vamos a trabajar con bash. Sobre todo esta serie va a estar enfocada para los usuarios de MacOs. Sin embargo, vamos a ser lo más apegados posible al estándar POSIX.</p>
 <h2 id="qué-es-la-terminal">¿Qué es la terminal?</h2>
 <p>Utilizar la terminal es como mensajearse con tu computadora. Tu le das una indicación escrita y ella responde, generalmente, con un montón de texto. Formalmente, la terminal es una interface que nos sirve para comunicarnos con nuestra computadora.</p>
-<p>Algunas veces nos encontraremos con el termino <code>CLI</code> (Command-line Interface). Esto se refiere a una interface para comunicarnos con un programa. Nosotros utilizaremos bash. Éste es un programa que corre en CLI's de sistemas operativos basados en Unix, como es el caso de MacOs.</p>
+<p>Algunas veces nos encontraremos con el termino <code>CLI</code> (Command-line Interface). Esto se refiere a una interface para comunicarnos con un programa. Nosotros utilizaremos bash. Éste es un programa que corre en CLI’s de sistemas operativos basados en Unix, como es el caso de MacOs.</p>
 <h2 id="para-qué-aprender-a-utilizar-la-terminal">¿Para qué aprender a utilizar la terminal?</h2>
 <p>¿Por qué querríamos aprender toda una serie de comandos, cuando los sistemas operativos modernos tienen muy buenas interfaces de usuario gráficas (GUI)? Hay varias aplicaciones, pero la mayoría de las que se suelen escuchar son sólo útiles para los programadores profesionales. El motivo por el que yo utilizo la terminal es que es más fácil de analizar grandes cantidades de información y me permite hacer cosas, que los programas, no tienen contemplado. Esto, sin olvidar que a través de la creación de <em>scripts</em> y modificando la configuración inicial, se puede llegar a automatizar mucho de lo que solemos hacer en una computadora.</p>
 <h2 id="tus-primeros-comandos">Tus primeros comandos</h2>
 <p>Para comenzar vamos a abrir la terminal. En MacOs la puedes abrir con las teclas <code>cmd + espacio</code> entonces aparecerá el buscador Spotlight, donde con escribir <code>Term</code>y un <code>enter</code> abrirá la aplicación de terminal.</p>
 <h3 id="mkdir">mkdir</h3>
-<p>Lo primero que vamos a hacer es crear una carpeta con el comando <code>mkdir programa</code> y damos <code>enter</code>. Con esto ya hemos creado nuestra primera carpeta llamada &quot;programa&quot;.</p>
+<p>Lo primero que vamos a hacer es crear una carpeta con el comando <code>mkdir programa</code> y damos <code>enter</code>. Con esto ya hemos creado nuestra primera carpeta llamada “programa”.</p>
 <h3 id="ls">ls</h3>
-<p>¿Cómo podemos ver el contenido de nuestra carpeta? Con el comando <code>ls</code>. Si lo escribes en la terminal (todos los comandos se finalizan con enter), podrás ver una lista carpetas y entre ellas nuestra carpeta &quot;programa&quot;.</p>
+<p>¿Cómo podemos ver el contenido de nuestra carpeta? Con el comando <code>ls</code>. Si lo escribes en la terminal (todos los comandos se finalizan con enter), podrás ver una lista carpetas y entre ellas nuestra carpeta “programa”.</p>
 <h3 id="pwd">pwd</h3>
 <p>¿Pero dónde estoy, no recuerdo haber visto estas carpetas? Cuando inicias tu terminal (en MacOs) inicias en la carpeta de usuario. Si en algún momento llegas a perderte y no sabes en qué carpeta estás o como llegaste ahí, puedes usar el comando <code>pwd</code> este comando imprime en la terminal tu ubicación. Si te fijaste, cuando utilizaste el comando <code>ls</code>, en medio del conenido, se veía la carpeta Desktop, la carpeta Downloads y otras a las que regularmente se accede mediante enlaces directos o através de la pestaña de favoritos.</p>
 <h3 id="cd">cd</h3>
-<p>Para moverte de una carpeta a otra se utiliza <code>cd</code>(change directory). Este comando acepta (igual que mkdir) un argumento, que sería la carpeta a la que quieres ir. Entremos a la carpeta &quot;Desktop&quot; con <code>cd Desktop</code>. Si utilizas pwd, podrás ver que te encuentras ahora en la carpeta de Desktop.</p>
-<p>¿Y cómo regreso a la carpeta que estaba antes? Si te fijas con <code>pwd</code> debes de haber recibido una respuesta como <code>/Users/tu-usuario/Desktop</code> para regresar a la carpeta &quot;tu-usuario&quot; hay tres maneras.</p>
+<p>Para moverte de una carpeta a otra se utiliza <code>cd</code>(change directory). Este comando acepta (igual que mkdir) un argumento, que sería la carpeta a la que quieres ir. Entremos a la carpeta “Desktop” con <code>cd Desktop</code>. Si utilizas pwd, podrás ver que te encuentras ahora en la carpeta de Desktop.</p>
+<p>¿Y cómo regreso a la carpeta que estaba antes? Si te fijas con <code>pwd</code> debes de haber recibido una respuesta como <code>/Users/tu-usuario/Desktop</code> para regresar a la carpeta “tu-usuario” hay tres maneras.</p>
 <pre><code>// La primera:
 cd /Users/tu-usuario
 
@@ -99,7 +99,7 @@ cd ..
 <h3 id="open">open</h3>
 <p>El comando <code>open</code> se utiliza para abrir un archivo con el programa determinado por el sistema operativo. Claro que el programa determinado se puede modificar en tus preferencias del sistema. Un ejemplo son las carpetas. El programa que utiliza Mac para abrir las carpetas es Finder. Entonces si utilizamos <code>open .</code> Abrirá la carpeta en la que estemos en el Finder, como suele verlo mayoría de la gente.</p>
 <h3 id="rm">rm</h3>
-<p>Como última tarea para este post vamos a eliminar nuestra carpeta &quot;programa&quot; con el comando <code>rm</code>. Éste tiene la peculiaridad de que no manda lo eliminado al basurero, sino que lo elimina completamente. Si quisiera eliminar un archivo bastaría con escribir <code>rm nombreDelArchivo</code> pero como lo que vamos a eliminar es una carpeta, necesitamos darle unas indicaciones extras.</p>
+<p>Como última tarea para este post vamos a eliminar nuestra carpeta “programa” con el comando <code>rm</code>. Éste tiene la peculiaridad de que no manda lo eliminado al basurero, sino que lo elimina completamente. Si quisiera eliminar un archivo bastaría con escribir <code>rm nombreDelArchivo</code> pero como lo que vamos a eliminar es una carpeta, necesitamos darle unas indicaciones extras.</p>
 <pre><code>// Primero vamos a asegurarnos de estar en la carpeta correcta. O sea, una carpeta arriba. En este caso, la carpeta de usuario
 
 cd ~ 
@@ -107,7 +107,7 @@ cd ~
 // Luego vamos a utilizar rm con la indicación rf.
 
 rm -rf programa</code></pre>
-<p>Es importante ver el guión <code>-</code> que se utiliza para esta indicación extra. La &quot;r&quot; se refiere a que elimine de manera recursiva. Esto quiere decir que elimine también el contenido y si en ese contenido hay carpetas, también el contenido de esas carpetas y así consecutivamente. La &quot;f&quot; es para &quot;forzar&quot; el comando. Es como cuando tu mamá te dice algo en tono serio para que no dudes en hacerlo.</p>
+<p>Es importante ver el guión <code>-</code> que se utiliza para esta indicación extra. La “r” se refiere a que elimine de manera recursiva. Esto quiere decir que elimine también el contenido y si en ese contenido hay carpetas, también el contenido de esas carpetas y así consecutivamente. La “f” es para “forzar” el comando. Es como cuando tu mamá te dice algo en tono serio para que no dudes en hacerlo.</p>
 <p>Bueno, con esto terminamos nuestra primera introducción a la terminal. No se olviden que la mejor manera de aprenderse todos estos comandos es utilizándolos, así que busquen pretextos para buscar sus archivos desde la terminal y abrirlos. Hasta el próximo post.</p>
 </div>
 </div>
