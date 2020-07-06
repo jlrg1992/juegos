@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Hazla tuya... la terminal | Jorge L. Rangel García</title>
+  <title>Hazla tuya... la terminal subtitle=mv, .bashrc, .bash_profile, alias date=09-06-2019 | Jorge L. Rangel García</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -55,11 +55,11 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-            <h1>Hazla tuya... la terminal</h1>
-            <h2 class="subheading">mv, .bashrc, .bash_profile, alias</h2>
+            <h1>Hazla tuya... la terminal subtitle=mv, .bashrc, .bash_profile, alias date=09-06-2019</h1>
+            <h2 class="subheading"></h2>
             <span class="meta">Publicado por 
               <a href="#">Jorge L. Rangel García</a>
-            el  09-06-2019</span>
+            el  </span>
           </div>
         </div>
       </div>
@@ -84,20 +84,20 @@ ls</code></pre>
 <pre><code>mv script.sh pagina.sh
 ls</code></pre>
 <p>Ahora podemos ver que ya no hay ningún archivo llamado <code>script.sh</code> y que en su lugar está el archivo <code>página.sh</code>.</p>
-<p>Ahora tenemos un nuevo problema. Para que se ejecute este script desde cualquier carpeta que estemos, necesitamos escribir <code>~/scripts/pagina.sh</code>y nosotros somos muy flojos para eso, por lo que vamos a crearle un &quot;apodo&quot; que nos ayude a escribir menos.</p>
+<p>Ahora tenemos un nuevo problema. Para que se ejecute este script desde cualquier carpeta que estemos, necesitamos escribir <code>~/scripts/pagina.sh</code>y nosotros somos muy flojos para eso, por lo que vamos a crearle un “apodo” que nos ayude a escribir menos.</p>
 <h2 id="bashrc-y-.bash_profile">.bashrc y .bash_profile</h2>
 <p>Estos dos archivos suelen encontrarse en nuestra carpeta de inicio. Así que volvemos allá y escribimos ls -A. Esto nos mostrará los archivos y carpetas oculatas en nuestra carpeta. Estos archivos en sistema Linux llevan un punto al inicio de su nombre. Puede que no tengas estos archivos en un inicio, pero no importa. Porque el punto de estos archivos es personalizar la forma en la que usas la computadora.</p>
 <p>Existe mucha gente que comparte estos archivos con los demás para que puedan tomar ideas de como mejorar su flujo de trabajo. Sin embargo, en muchas ocasiones se puede tener información delicada en este archivo que se prefiere mantener lejos de los ojos fizgones.</p>
 <p>Dado que estoy en MacOs, la forma más común de utilizar estos archivos es simplemente agregar nuestros <em>alias</em> y <em>funciones</em> a <code>.bash_profile</code>. Los que utilizan distribuciones de Linux utilizan <code>.bashrc</code>. En lo personal yo utilizo <code>.bashrc</code> e invoco con <code>source .bashrc</code> todo en <code>bash_profile</code>. Me funciona cuando utilizo <strong>tmux</strong> pero desde que comencé a utilizar iTerm2, no le he dado el mismo uso. Aunque de vez en cuando utilizo algún servidor Linux, en el que es bastante conveniente seguir teniendo esta modificación.</p>
 <p>Como estamos empezando aún y no vamos a utilizar <strong>tmux</strong> vamos a poner los alias en <code>.bashrc</code>. Ya más adelante haremos una explicación de la diferencia de estos dos archivos.</p>
 <h2 id="alias">alias</h2>
-<p>Un alias es un &quot;apodo&quot; a un código relativamente sencillo que se utiliza, regularmente, para evitarnos los problemas de tener que escribir muchas letras o para hacer que un comando que utilizamos regularmente, se comporte de una manera distinta.</p>
-<p>Primero, haremos el <strong>alias</strong> de nuestro script &quot;pagina.sh&quot;.</p>
+<p>Un alias es un “apodo” a un código relativamente sencillo que se utiliza, regularmente, para evitarnos los problemas de tener que escribir muchas letras o para hacer que un comando que utilizamos regularmente, se comporte de una manera distinta.</p>
+<p>Primero, haremos el <strong>alias</strong> de nuestro script “pagina.sh”.</p>
 <pre><code>echo alias pagina=&quot;cd ~/scripts/pagina.sh&quot; &gt;&gt; .bash_profile</code></pre>
 <p>Para editar estos archivos podemos utilizar <strong>vim</strong> como la vez pasada o podemos simplemente direccionar el texto al archivo. Como acabamos de hacer.</p>
-<p>Si intentas escribir <code>pagina</code>en tu CLI ahora mismo, no va a funcionar. Primero tiene que enterarse la terminar no sólo de que ya existe un <code>.bash_profile</code> sino también que se le han hecho modificaciones. La forma más comoda cuando se está comenzando es cerrando la terminal y volviéndola a abrir. Otra forma, en mi opinión, mejor. Es con el comando <code>source</code> que mencionamos como una curiosidad allá arriba. No vamos a hablar mucho de este comando. Pero digamos que es como decirle a la terminal &quot;Aquí están las nuevas instrucciones&quot;.</p>
+<p>Si intentas escribir <code>pagina</code>en tu CLI ahora mismo, no va a funcionar. Primero tiene que enterarse la terminar no sólo de que ya existe un <code>.bash_profile</code> sino también que se le han hecho modificaciones. La forma más comoda cuando se está comenzando es cerrando la terminal y volviéndola a abrir. Otra forma, en mi opinión, mejor. Es con el comando <code>source</code> que mencionamos como una curiosidad allá arriba. No vamos a hablar mucho de este comando. Pero digamos que es como decirle a la terminal “Aquí están las nuevas instrucciones”.</p>
 <pre><code>source .bash_profile</code></pre>
-<p>De esa manera, ya estará nuestro alias listo para utilizarlo. De tal manera que el código de abajo debería mostrarnos que hemos creado una carpeta llamada 'test' con todo el contenido que habíamos indicado la vez pasada.</p>
+<p>De esa manera, ya estará nuestro alias listo para utilizarlo. De tal manera que el código de abajo debería mostrarnos que hemos creado una carpeta llamada ‘test’ con todo el contenido que habíamos indicado la vez pasada.</p>
 <pre><code>pagina test</code></pre>
 <p>Hay muchos <strong>alias</strong> que puedes utilizar para agilizar tu flujo de trabajo. Abajo te dejo algunos ejemplos. Sólo recuerda que el apodo no puede ser de más de una palabra de largo. Yo recomiendo que utilices puras letras, para ahorrarte problemas, puedes utilizar número, pero no comiences el <strong>alias</strong> con un número. Recuerda que entre el apodo, el signos de igual y las comillas, no puede haber ningún espacio. Escribe un alias por línea. Con eso deberías estar bien.</p>
 <pre><code>alias v=&quot;vim&quot;
