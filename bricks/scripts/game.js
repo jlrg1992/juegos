@@ -22,7 +22,7 @@ class Game{
     loop(timestamp){
         let deltaTime = timestamp - this.lastUpdate
         this.lastCTXUpdate = timestamp
-        //this.ctx.clearRect(0,0,this.W,this.H)
+        this.ctx.clearRect(0,0,this.W,this.H)
         this.draw(this.ctx, deltaTime)
         requestAnimationFrame(this.loop)
     }
