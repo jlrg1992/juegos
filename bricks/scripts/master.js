@@ -2,8 +2,8 @@ let canvas = document.getElementById('canvas')
 let config = {
                 x: 0,
                 y: 0,
-                gameWidth: 300,
-                gameHeight: 500,
+                gameWidth: canvas.width,
+                gameHeight: canvas.height,
                 playerType: "local",
                 ctx: canvas.getContext('2d')
              }

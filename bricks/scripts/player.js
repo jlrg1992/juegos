@@ -1,7 +1,7 @@
 class Paddle{
     constructor(x,y){
         this.height = 10
-        this.width = 50
+        this.width = 150
         this.x = x/2-(150/2)
         this.y = y - 20 - this.height
         this.vel = 0

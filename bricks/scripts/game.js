@@ -6,25 +6,24 @@ class Game{
         this.H = params.gameHeight
         this.ctx = params.ctx
         this.lastUpdate = 0
-        this.handler = null
-        this.playerType = params.localPlayer
-        requestAnimationFrame(this.loop)
+        this.playerType = params.playerType
     }
 
     start(){
         this.paddle = new Paddle(this.W, this.H)
         this.Objects = []
-        if(this.localPlayer){
-            InputHandler()
+        if(this.playerType == 'local'){
+            new InputHandler(this.paddle)
         }
+        requestAnimationFrame((x)=>this.loop(x));
     }
 
     loop(timestamp){
         let deltaTime = timestamp - this.lastUpdate
-        this.lastCTXUpdate = timestamp
+        this.lastUpdate = timestamp
         this.ctx.clearRect(0,0,this.W,this.H)
         this.draw(this.ctx, deltaTime)
-        requestAnimationFrame(this.loop)
+        requestAnimationFrame((x)=>this.loop(x));
     }
 
     draw(ctx, dt){
