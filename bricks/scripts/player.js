@@ -5,7 +5,7 @@ class Paddle{
         this.x = x/2-(150/2)
         this.y = y - 20 - this.height
         this.vel = 0
-        this.maxSpeed = 150
+        this.maxSpeed = 200
         this.W = x
     }
     draw(ctx){

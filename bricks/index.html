@@ -23,6 +23,9 @@
     canvas{
       border: 1px solid black;
     }
+    button{
+        margin-top: 20px;
+    }
   </style>
 
 </head>
@@ -65,8 +68,8 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h1>Blog</h1>
-            <span class="subheading">por Jorge L. Rangel Garc&iacute;a</span>
+            <h1>Bricks</h1>
+            <span class="subheading">Destruye los ladrillos!!!!</span>
           </div>
         </div>
       </div>
@@ -79,14 +82,13 @@
       <div class="col-12 text-center">
         <canvas id="canvas" width="1000px" height="450px" display="inline-block"></canvas>
       </div>
-      <div class="col-6 text-center">
-        <button class="btn btn-primary btn-block">Empezar</button>
-      </div>
-      <div class="col-6 text-center">
-        <button class="btn btn-dark btn-block">Pausa</button>
+      <div class="col-12 text-center">
+        <button id="elBoton" onclick="togglePause()" class="btn btn-dark btn-block">Empezar</button>
       </div>
     </div>
   </div>
+
+<img id="ball" style="display: none" src="./img/ball.png">
 
 
 
@@ -100,7 +102,7 @@
               <a href="https://github.com/jlrg1992" target="__blank">Github</a>
             </li>
           </ul>
-          <p class="copyright text-muted">Jorge L. Rangel García 2019 | <a href="aviso-legal.html">Aviso legal</a> </p>
+          <p class="copyright text-muted">Jorge L. Rangel García 2020</p>
         </div>
       </div>
     </div>
@@ -112,6 +114,7 @@
   <script src="./scripts/control.js"></script>
   <script src="./scripts/player.js"></script>
   <script src="./scripts/brick.js"></script>
+  <script src="./scripts/ball.js"></script>
   <script src="./scripts/game.js"></script>
   <script src="./scripts/master.js"></script>
 
