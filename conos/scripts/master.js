@@ -7,7 +7,10 @@ let config = {
                 gameHeight: canvas.height,
                 playerType: "local",
                 ctx: canvas.getContext('2d'),
-                ballImg: document.getElementById('ball')
+                ballImg: document.getElementById('ball'),
+                brickImg: document.getElementById('brick'),
+                background: document.getElementById('background'),
+                paddleImg: document.getElementById('paddle')
              }
 let STATE = {
                 PLAYING: 1,
@@ -16,7 +19,7 @@ let STATE = {
                 LOST: 4,
                 LEVEL_UP:5
             }
-const game = new Game(config)
+
 function start(){
     alert("Puedes moverte con las flechas <-- -->.")
     game.start()
@@ -48,3 +51,9 @@ function togglePause(){
         break
     }
 }
+
+function distance(pos1, pos2){
+    return Math.sqrt(Math.pow(Math.abs(pos1.x - pos2.x), 2) + Math.pow(Math.abs(pos1.y - pos2.y), 2));
+}
+
+const game = new Game(config)
