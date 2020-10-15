@@ -12,7 +12,7 @@ class Game{
         this.ballImg = params.ballImg
         this.brickImg = params.brickImg
         this.paddleImg = params.paddleImg
-        this.level = 0
+        this.score = 0
         let ballParams = {
                             W: this.W,
                             H: this.H,
@@ -104,22 +104,31 @@ class Game{
         this.generateBricks(brickParams)
         this.status = STATE.PLAYING
     }
-    levelUP(){
-        this.level++
-        this.reset()
-    }
     playing(ctx,dt){
         if(this.bricks.length <= 0){
-            this.levelUP()
+            this.reset()
         }
+        // Yard
         ctx.globalAlpha=0.9
         ctx.drawImage(this.background,0,0,this.W,this.H);
         ctx.globalAlpha=1
+        // Updates
         this.paddle.update(dt)
         this.ball.update(dt,this)
-        this.bricks.forEach((x)=>x.brickCollision(this.ball))
-        this.bricks = this.bricks.filter((x)=> x.counter > 0)
-        this.paddleCollision(this.ball, this.paddle)
+        // Collision
+        if(!this.paddleCollision(this.ball, this.paddle)){
+            let brickNumberHolder = this.bricks.length
+            this.bricks.forEach((x)=>x.brickCollision(this.ball))
+            this.bricks = this.bricks.filter((x)=> x.counter > 0)
+            this.score += brickNumberHolder - this.bricks.length
+        }
+        // draw
+        ctx.globalAlpha=0.7
+        ctx.font = "100px Comic Sans MS"
+        ctx.fillStyle = "white"
+        ctx.textAlign = "center"
+        ctx.fillText(this.score, canvas.width/2, canvas.height/4)
+        ctx.globalAlpha=1
         this.paddle.draw(ctx)
         this.ball.draw(ctx)
         this.bricks.forEach((x)=> x.draw(ctx))
@@ -131,6 +140,8 @@ class Game{
         if( positionY && positionX){
             ball.position.y = paddle.position.y-ball.size
             ball.invertY()
+            return true
         }
+        return false
     }
 }

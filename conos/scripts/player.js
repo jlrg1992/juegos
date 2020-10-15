@@ -1,8 +1,8 @@
 class Paddle{
     constructor(W,H,img){
-        this.height = 7
+        this.height = 50
         this.width = 75
-        this.position = {x: W/2-(150/2), y: H - 20 - this.height}
+        this.position = {x: W/2-(150/2), y: H - 15 - this.height}
         this.vel = 0
         this.maxSpeed = 200
         this.W = W
