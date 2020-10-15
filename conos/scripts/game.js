@@ -102,6 +102,7 @@ class Game{
                           }
         this.bricks = []
         this.generateBricks(brickParams)
+        this.score = 0
         this.status = STATE.PLAYING
     }
     playing(ctx,dt){
