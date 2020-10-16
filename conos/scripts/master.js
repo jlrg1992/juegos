@@ -32,22 +32,22 @@ function togglePause(){
 
         case STATE.INTRO:
             start()
-            elBoton.innerHTML = "Pausar"
+            elBoton.innerHTML = "Pause"
         break
 
         case STATE.PAUSED:
-            elBoton.innerHTML = "Pausar"
+            elBoton.innerHTML = "Pause"
             game.status = STATE.PLAYING
         break
 
         case STATE.PLAYING:
-            elBoton.innerHTML = "Continuar"
+            elBoton.innerHTML = "Continue"
             game.status = STATE.PAUSED
         break
 
         case STATE.LOST:
             start()
-            elBoton.innHTML = "Pausar"
+            elBoton.innHTML = "Pause"
         break
     }
 }
