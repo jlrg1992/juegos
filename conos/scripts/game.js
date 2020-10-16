@@ -49,7 +49,7 @@ class Game{
         this.ctx.fillStyle = "white"
         this.ctx.font = "60px Arial"
         this.ctx.textAlign = "center"
-        this.ctx.fillText("Pausa",this.W/2,this.H/2)
+        this.ctx.fillText("Pause",this.W/2,this.H/2)
     }
 
     draw(ctx, dt){
