@@ -59,8 +59,8 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h1>Soccer</h1>
-            <span class="subheading">Adaptation from an old classic.</span>
+            <h1>Pixel Art Editor</h1>
+            <span class="subheading">by Jorge L. Rangel García</span>
           </div>
         </div>
       </div>
@@ -71,19 +71,17 @@
   <!-- Main Content -->
   <div class="container">
     <div class="row">
-      <div class="col-12 text-center">
-        <canvas id="canvas" width="450px" height="450px" display="inline-block"></canvas>
+      <div class="col-2">
+        <button id="elBoton" onclick="download = true" class="btn btn-dark btn-block">Download</button>
       </div>
-      <div class="col-12 text-center">
-        <button id="elBoton" onclick="togglePause()" class="btn btn-dark btn-block">Click to Start</button>
+      <div class="col-2">
+        <button id="elBoton" onclick="reset = true" class="btn btn-dark btn-block">Reset</button>
+      </div>
+      <div class="col-8 text-center" id="canvacontainer">
+        
       </div>
     </div>
   </div>
-
-<img id="ball" style="display: none" src="./img/ball.png">
-<img id="brick" style="display: none" src="./img/brick.ico">
-<img id="background" style="display: none" src="./img/background.jpg">
-<img id="paddle" style="display: none" src="./img/paddle.png">
 
 
 
